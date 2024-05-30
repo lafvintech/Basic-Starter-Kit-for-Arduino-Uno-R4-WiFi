@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.1.1 Blinking LED &mdash; Basic Starter Kit for Arduino UNO R4 WiFi  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.2.1 Active Buzzer" href="1.2.1%20Active%20Buzzer.html" />
+    <link rel="prev" title="1 Output (for Pi 4)" href="1_output.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preparation/preparation.html">Preparation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="1_output.html">1 Output (for Pi 4)</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1.1 Blinking LED</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connect">Connect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon">Phenomenon</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1.2.1%20Active%20Buzzer.html">1.2.1 Active Buzzer</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Basic Starter Kit for Arduino UNO R4 WiFi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="1_output.html">1 Output (for Pi 4)</a></li>
+      <li class="breadcrumb-item active">1.1.1 Blinking LED</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/1.1.1_Blinking_LED.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blinking-led">
+<h1>1.1.1 Blinking LED<a class="headerlink" href="#blinking-led" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>In this lesson, we will learn how to make a blinking LED by programming. Through your settings, your LED can produce a series of interesting phenomena. Now, go for it.</p>
+</section>
+<section id="components">
+<h2>Components<a class="headerlink" href="#components" title="Link to this heading"></a></h2>
+<p><img alt="" src="img/list/blinking_led_list.png" /></p>
+<div class="warning" style="background-color: #E7F2FA; color=#6AB0DE; padding: 10px; border: 1px solid #333; border-radius: 5px;">
+    NOTE: In order to proceed smoothly, you need to bring your own Raspberry Pi, TF card and Raspberry Pi power.
+</div>
+<p><strong>Breadboard</strong></p>
+<p>A breadboard is a construction base for prototyping of electronics. It is used to build and test circuits quickly before finishing any circuit design. And it has many holes into which components mentioned above can be inserted like ICs and resistors as well as jumper wires. The breadboard allows you to plug in and remove components easily.</p>
+<p>The picture shows the internal structure of a full + breadboard. Although these holes on the breadboard appear to be independent of each other, they are actually connected to each other through metal strips internally.</p>
+<p><img alt="" src="img/image41.png" /></p>
+<p><strong>LED</strong></p>
+<p>LED is a kind of diode. LED will shine only if the long pin of LED is connected to the positive electrode and the short pin is connected to negative electrode.</p>
+<p><img alt="" src="img/image42.png" /><img alt="image43" src="img/image43.png" /></p>
+<p>The LED can not be directly connected to power supply, which can damage component. A resistor with 160Ω or larger (work in 5V) must be connected in series in the circuit of LED.</p>
+<p><strong>Resistor</strong></p>
+<p>Resistor is an electronic element that can limit the branch current. A fixed resistor is a kind of resistor whose resistance cannot be changed, while that of a potentiometer or a variable resistor can be adjusted.</p>
+<p>Fixed resistor is applied in this kit. In the circuit, it is essential to protect the connected components. The following pictures show a real object, 220Ω resistor and two generally used circuit symbols of resistor. Ω is the unit of resistance and the larger units include KΩ, MΩ, etc. Their relationship can be shown as follows: 1 MΩ=1000 KΩ, 1 KΩ = 1000 Ω. Normally, the value of resistance is marked on it. So if you see these symbols in a circuit, it means that there is a resistor.</p>
+<p><img alt="" src="img/image44.png" /></p>
+<p><img alt="image45" src="img/image45.png" /></p>
+<p><img alt="image46" src="img/image46.png" /></p>
+<p>When using a resistor, we need to know its resistance first. Here are two methods: you can observe the bands on the resistor, or use a multimeter to measure the resistance. You are recommended to use the first method as it is more convenient and faster. To measure the value, use multimeter.</p>
+<p>As shown in the card, each color stands for a number.</p>
+<p><img alt="" src="img/image47.jpeg" /></p>
+</section>
+<section id="connect">
+<h2>Connect<a class="headerlink" href="#connect" title="Link to this heading"></a></h2>
+<p>In this experiment, connect a 220Ω resistor to the anode (the long pin of the LED), then the resistor to 3.3 V, and connect the cathode (the short pin) of the LED to GPIO17 of Raspberry Pi. Therefore, to turn on an LED, we need to make GPIO17 low (0V) level. We can get this phenomenon by programming</p>
+<div class="warning" style="background-color: #E7F2FA; color=#6AB0DE; padding: 10px; border: 1px solid #333; border-radius: 5px;">
+    NOTE: Pin11 refers to the 11th pin of the Raspberry Pi from left to right, and its corresponding wiringPi and BCM pin numbers are shown in the following table.
+</div>
+<p>In the C language related content, we make GPIO0 equivalent to 0 in the wiringPi. Among the Python language related content, BCM 17 is 17 in the BCM column of the following table. At the same time, they are the same as the 11th pin on the Raspberry Pi, Pin 11.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>T-Board Name T-Board</p></th>
+<th class="head"><p>physical</p></th>
+<th class="head"><p>wiringPi</p></th>
+<th class="head"><p>BCM</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GPIO17</p></td>
+<td><p>Pin 11 销11</p></td>
+<td><p>0</p></td>
+<td><p>17</p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="img/image48.png" /></p>
+<p><img alt="" src="img/connect/1.1.1.png" /></p>
+<div class="warning" style="background-color: #E7F2FA; color=#6AB0DE; padding: 10px; border: 1px solid #333; border-radius: 5px;">
+    NOTE: In the following lessons, we will use command to enter the code file instead of right-clicking. But you can choose the method you prefer.
+</div>
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link to this heading"></a></h2>
+<p><strong>Go to the folder of the code.</strong></p>
+<p>Remote login to your raspberry Pi , use <code class="docutils literal notranslate"><span class="pre">cd</span></code> to change directory:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/super-starter-kit-for-raspberry-pi/c/1.1.1/
+</pre></div>
+</div>
+<p><img alt="" src="img/cd-dir.png" /></p>
+<div class="warning" style="background-color: #E7F2FA; color=#6AB0DE; padding: 10px; border: 1px solid #333; border-radius: 5px;">
+    NOTE: Change directory to the path of the code in this experiment via cd.
+</div>
+<p><strong>Compile the code</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span><span class="m">1</span>.1.1_BlinkingLed.c<span class="w"> </span>-o<span class="w"> </span>BlinkingLed<span class="w"> </span>-lwiringPi
+</pre></div>
+</div>
+<div class="warning" style="background-color: #E7F2FA; color=#6AB0DE; padding: 10px; border: 1px solid #333; border-radius: 5px;">
+    NOTE: gcc is GNU Compiler Collection. Here, it functions like compiling the C language file 1_BlinkingLed.c and outputting an executable file.
+</div>
+<p>In the command, <code class="docutils literal notranslate"><span class="pre">-o</span></code> means outputting (the character immediately following -o is the filename output after compilation, and an executable named <code class="docutils literal notranslate"><span class="pre">BlinkingLed</span></code> will generate here) and <code class="docutils literal notranslate"><span class="pre">-lwiringPi</span></code> is to load the library wiringPi (<code class="docutils literal notranslate"><span class="pre">l</span></code> is the abbreviation of library).</p>
+<p><strong>Run the executable file output in the previous step.</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>./BlinkingLed
+</pre></div>
+</div>
+<div class="warning" style="background-color: #E7F2FA; color=#6AB0DE; padding: 10px; border: 1px solid #333; border-radius: 5px;">
+    NOTE: To control the GPIO, you need to run the program, by the command, sudo(superuser do). The command `./` indicates the current directory. The whole command is to run the `BlinkingLed` in the current directory.
+</div>
+<p><img alt="" src="img/code-run1.png" /></p>
+<p>After the code runs, you will see the LED flashing.</p>
+<p>If you want to edit the code file <code class="docutils literal notranslate"><span class="pre">1.1.1_BlinkingLed.c</span></code>, press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">C</span></code> to stop running the code. Then type the following command to open it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="mf">1.1.1</span><span class="n">_BlinkingLed</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+<div class="warning" style="background-color: #E7F2FA; color=#6AB0DE; padding: 10px; border: 1px solid #333; border-radius: 5px;">
+    NOTE: nano is a text editor tool. The command is used to open the code file `1.1.1_BlinkingLed.c` by this tool.
+</div>
+Press `Ctrl+X` to exit. If you have modified the code, there will be a prompt asking whether to save the changes or not. Type in `Y` (save) or `N` (don’t save). Then press `Enter` to exit. Repeat `Step 3` and `Step 4` to see the effect after modifying.
+<p><strong>For Python Language User</strong></p>
+<p><strong>Go to the folder of the code.</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/super-starter-kit-for-raspberry-pi/python/1.1.1/
+</pre></div>
+</div>
+<p><strong>Run</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span><span class="m">1</span>.1.1_BlinkingLed.py
+</pre></div>
+</div>
+<p>After the code runs, you will see the LED flashing.</p>
+</section>
+<section id="phenomenon">
+<h2>Phenomenon<a class="headerlink" href="#phenomenon" title="Link to this heading"></a></h2>
+<p><img alt="" src="img/phenomenon/111.jpg" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1_output.html" class="btn btn-neutral float-left" title="1 Output (for Pi 4)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1.2.1%20Active%20Buzzer.html" class="btn btn-neutral float-right" title="1.2.1 Active Buzzer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024,Bot.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

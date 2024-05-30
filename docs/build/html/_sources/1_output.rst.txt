@@ -1,0 +1,18 @@
+1 Output (for Pi 4)
+=====================
+
+**1.1 Displays**
+
+.. toctree::
+    :maxdepth: 1
+
+    1.1.1_Blinking_LED.md
+
+
+**1.2 Sound**
+
+.. toctree::
+    :maxdepth: 1
+
+    1.2.1 Active Buzzer.md
+
