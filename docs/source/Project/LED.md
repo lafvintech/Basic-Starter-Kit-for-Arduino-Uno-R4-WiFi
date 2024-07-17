@@ -4,17 +4,25 @@ Just as printing “Hello, world!” is the first step in learning to program, u
 
 ## Wiring
 
+<<<<<<< Updated upstream
 [![](https://docs.sunfounder.com/projects/elite-explorer-kit/en/latest/_images/10-led_bb.png)](https://docs.sunfounder.com/projects/elite-explorer-kit/en/latest/_images/10-led_bb.png)
 
 ## Schematic Diagram
 
 [![../_images/10_led_schematic.png](https://docs.sunfounder.com/projects/elite-explorer-kit/en/latest/_images/10_led_schematic.png)](https://docs.sunfounder.com/projects/elite-explorer-kit/en/latest/_images/10_led_schematic.png)
+=======
+![](./img/RGB_wiring.png)
+>>>>>>> Stashed changes
 
 ## Code
 
 > **Note:**
 >
+<<<<<<< Updated upstream
 > * You can open the file `10-led.ino` under the path of `elite-explorer-kit-main\basic_project\10-led`.
+=======
+> * You can open the file `10-led.ino` under the path of `Basic-Starter-Kit-for-Arduino-Uno-R4-WiFi-main\10-led`.
+>>>>>>> Stashed changes
 
 <div style="border: 1px solid #f0f0f0; padding: 10px; background-color: #e6ffe6;">
   <strong>Note:</strong> This is a note box created using HTML.
