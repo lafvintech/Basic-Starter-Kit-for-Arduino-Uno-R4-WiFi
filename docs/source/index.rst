@@ -1,22 +1,12 @@
 Basic Starter Kit for UNO R4 WiFi
 ===========================================
 
-
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Get_Started_with_Arduino/Get_Started_with_Arduino
-   Project/Project
-<<<<<<< Updated upstream
-   a
-=======
->>>>>>> Stashed changes
+   Basic_Project/Basic_Project
+   Extension_Project/Extension_Project
+   Components_Kit/Components_Kit
+   Download_the_Code/Download_the_Code
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

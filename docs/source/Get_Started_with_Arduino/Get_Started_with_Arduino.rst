@@ -1,16 +1,14 @@
 Get Started with Arduino
 ====================================
 
-In this chapter, we firstly learn to start up Raspberry Pi. The content
-includes installing the OS, Raspberry Pi network and how to open terminal.
-
-.. note::
-
-    You can check the complete tutorial on the official website of the Raspberry Pi: `raspberry-pi-setting-up <https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up>`_.
-
-    If your Raspberry Pi is set up, you can skip the part and go into the next chapter.
+Follow these steps to learn how to use Arduino from zero!
 
 .. toctree::
     :maxdepth: 2
 
-    What_Do_We_Need.md
+    Install_Arduino_IDE.rst
+    Creating_Opening_Saving_Sketches.rst
+    How_to_Upload_Sketch.rst
+    Sketch_Writing_Rules.rst
+    How_to_Build_the_Circuit.rst
+    How_to_add_Libraries.rst
