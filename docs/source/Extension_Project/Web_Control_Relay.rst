@@ -52,7 +52,7 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
     .. image:: img/Web_Control_Realy_Code.png
         :align: center
         :width: 100%
-    Then use your mobile phone to connect to your home router's WiFi (the mobile phone and UNO R4 are connected to the same LAN), and access the returned IP address in the serial monitor in the mobile browser. The browser will get the control page.
+  Then use your mobile phone to connect to your home router's WiFi (the mobile phone and UNO R4 are connected to the same LAN), and access the returned IP address in the serial monitor in the mobile browser. The browser will get the control page.
 
 .. image:: img/Web_Control_Realy_Code1.png
         :align: center

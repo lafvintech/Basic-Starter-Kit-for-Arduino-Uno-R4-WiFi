@@ -18,4 +18,11 @@ Although these holes on the breadboard appear to be independent of each other, t
 .. image:: img/breadboard_internal.png
     :width: 600
 
+.. note:: 
+    G1 and G2, V1 and V2 in the breadboard are not connected. Usually you need to use jumper wires to connect them.
+
+.. image:: img/breadboard_internal1.png
+    :align: center
+    :width: 85%
+
 If you want to know more about breadboard, refer to: `How to Use a Breadboard for Electronics and Circuits <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard>`_

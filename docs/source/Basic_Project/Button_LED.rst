@@ -20,17 +20,10 @@ Wiring
 
 .. image:: img/Button_LED_Wiring.png
     :align: center
-    :width: 70%
+    :width: 90%
 
-
-Schematic Diagram
-------------------------
 
 Connect one end of the buttons to pin 12 which connects with a pull-down resistor. Connect the other end of the resistor to GND and one of the pins at the other end of the button to 5V. When the button is pressed, pin 12 is 5V (HIGH) and set pin 13 (integrated with an LED) as High at the same time. Then release the button (pin 12 changes to LOW) and pin 13 is Low. So we will see the LED lights up and goes out alternately as the button is pressed and released.
-
-.. image:: img/Button_LED_Wiring1.png
-    :align: center
-    :width: 70%
 
 
 Code

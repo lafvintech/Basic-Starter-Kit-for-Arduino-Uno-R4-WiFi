@@ -25,6 +25,11 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
 
 Note: This is the SSID and Password you created for UNO R4 WIFI. It is not the SSID and Password of your home router's WiFi access point.
 
+.. image:: img/Web_Control_LED.png
+    :width: 80%
+    :align: center
+
+
 2. Code explanation
 ----------------------
 
@@ -65,6 +70,7 @@ Note: This is the SSID and Password you created for UNO R4 WIFI. It is not the S
        // start the web server on port 80
        server.begin();
      }
+  
   We also check if the firmware version of uno R4 wifi is up to date. If it is not the latest version, a prompt for upgrade will be displayed. You can refer to :ref:`update_firmware` for firmware upgrade.
 
    .. code-block:: arduino

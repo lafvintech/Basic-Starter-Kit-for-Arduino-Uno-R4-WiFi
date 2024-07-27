@@ -76,6 +76,18 @@ Here are some things you should know about breadboards.
 
 #. In most cases, both sides of the breadboard are used as power buses, and the holes in each column (about 50 holes) are connected together. As a general rule, positive power supplies are connected to the holes near the red wire, and negative power supplies are connected to the holes near the blue wire.
 
+.. note:: 
+    G1 and G2, V1 and V2 in the breadboard are not connected. Usually you need to use jumper wires to connect them.
+
+.. image:: img/Bulid_Circuit4-4.png
+    :align: center
+    :width: 85%
+
+.. raw:: html
+    
+    <br/>
+    <br/>
+
 **Let us follow the direction of the current to build the circuit!**
 
 .. image:: img/Bulid_Circuit5.png

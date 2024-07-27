@@ -1,19 +1,10 @@
 
-Learn about the Components in Your Kit
+Components Introduction
 =========================================
-
-Components List
------------------
-
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
 
 .. image:: img/list.jpg
     :align: center
     :width: 600
-
-Components Introductions
---------------------------
-
 
 Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
 
