@@ -43,7 +43,22 @@ html_theme = 'sphinx_rtd_theme'
 # html_static_path = ['_static']
 # html_logo = '_static/Logo2.png'
 
+#html_theme_options = {
+#     'logo_only': True,
+#     'display_version': False,
+# }
+
 html_theme_options = {
      'logo_only': True,
      'display_version': False,
+     'vcs_pageview_mode': '',
  }
+
+# Configure the "View page source" link
+html_context = {
+    'display_github': False,
+    'github_user': '',
+    'github_repo': '',
+    'github_version': '',
+    'conf_py_path': '',
+}
