@@ -16,10 +16,6 @@ Wiring
 
    <br/>
 
-**Schematic**
-
-.. image:: img/Digital_Dice_LED_Matrix_Wiring1.png
-   :width: 100%
 
 Code
 ----------------------
